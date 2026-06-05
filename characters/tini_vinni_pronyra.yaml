@@ -1,0 +1,134 @@
+name: "Тини Винни Проныра"
+race: "Легконогий полурослик"
+class: "Плут"
+level: 1
+background: "Преступник"
+subclass: "Вор (Thief)"
+
+characteristics:
+  strength: 13
+  dexterity: 17
+  constitution: 12
+  intelligence: 10
+  wisdom: 8
+  charisma: 15
+
+modifiers:
+  strength: 1
+  dexterity: 3
+  constitution: 1
+  intelligence: 0
+  wisdom: -1
+  charisma: 2
+
+combat:
+  hp_current: 9
+  hp_max: 9
+  ac: 14
+  initiative: 3
+  speed: 25
+  hit_dice: "1d8"
+  proficiency_bonus: 2
+
+saving_throws:
+  strength: 3
+  dexterity: 5
+  constitution: 3
+  intelligence: 0
+  wisdom: -1
+  charisma: 4
+  proficient:
+    - dexterity
+    - intelligence
+
+skills:
+  deception: 6   # Cha +2 + Prof +2 = +4, Expertise x2 = +6
+  persuasion: 4  # Cha +2 + Prof +2 = +4
+  stealth: 5     # Dex +3 + Prof +2 = +5, Expertise x2 = +7? Actually Expertise on Stealth gives +7, but we already used Expertise on Deception, choose Stealth instead. Adjust:
+  # We'll set Expertise on Deception and Stealth
+  # Recalculate:
+  # Deception: Cha +2 + Prof +2 = +4, Expertise => +6
+  # Stealth: Dex +3 + Prof +2 = +5, Expertise => +7
+  # Persuasion: Cha +2 + Prof +2 = +4
+  # Update values accordingly:
+  deception: 6
+  stealth: 7
+  persuasion: 4
+  acrobatics: 1   # Str +1 (no proficiency)
+  investigation: 0 # Int +0
+  perception: -1  # Wis -1
+  athletics: 1    # Str +1
+  sleight_of_hand: 5 # Dex +3 + Prof +2
+  proficient:
+    - deception
+    - stealth
+    - persuasion
+    - sleight_of_hand
+
+proficiencies:
+  armor:
+    - "Лёгкие доспехи"
+  weapons:
+    - "Простое оружие"
+    - "Воинское оружие"
+  tools:
+    - "Набор вора"
+  languages:
+    - "Общий"
+    - "Первичный"
+    - "Халфлингский"
+
+attacks:
+  - name: "Короткий меч"
+    bonus: 5   # Dex +3 + Prof +2
+    damage: "1d6+3"
+    damage_type: "резаный"
+    properties: "finesse, light"
+  - name: "Пистолет"
+    bonus: 5
+    damage: "1d6+3"
+    damage_type: "пулевой"
+    range: "30/90 фт"
+    properties: "ammunition, loading"
+
+class_features:
+  - name: "Sneak Attack"
+    description: "1d6 урона, если цель находится в пределах 5 футов от союзника или вы имеете преимущество в атаке."
+    damage: "1d6"
+  - name: "Thieves' Cant"
+    description: "Секретный язык преступного мира."
+  - name: "Expertise"
+    description: "Выберите два навыка, в которых ваш бонус удваивается. Выбрано: Deception, Stealth."
+  - name: "Cunning Action"
+    description: "Бонусное действие: Dash, Disengage или Hide."
+
+racial_features:
+  - name: "Lucky"
+    description: "Переворот 1 на d20 три раза в день."
+  - name: "Brave"
+    description: "Плюс к спасброскам против страха."
+  - name: "Halfling Nimbleness"
+    description: "Можно перемещаться через пространство, занятое существом большего размера."
+  - name: "Darkvision"
+    description: "Видение в темноте до 60 футов."
+
+equipment:
+  - "Кожаный доспех"
+  - "Короткий меч"
+  - "Пистолет"
+  - "Исследовательский набор"
+  - "10 яблок"
+  - "Карта города"
+  - "Набор костей"
+  - "Набор вора"
+
+money:
+  gp: 0
+  sp: 0
+  cp: 0
+
+trait: "Я ищу тех, кто разрушил мою семью, чтобы отомстить"
+
+history: |
+  Тини Винни Проныра родился в благополучной семье в крупном портовом городе. Его родители владели небольшим магазином, а он с детства учился искусству торговли и общения. Однажды, когда Тини был ещё подростком, в город пришли враждебные кланы, разграбили его дом и убили всю семью. Оставшись один на улицах, он быстро понял, что выживание зависит от ума и ловкости. 
+  Тини стал вором, используя свои навыки обмана и убеждения, чтобы добывать еду и скрываться от стражи. Его цель — отомстить тем, кто уничтожил его семью, и вернуть себе утраченное благосостояние. Он ищет союзников, которые помогут ему в этом пути, но всегда остаётся осторожным и готовым к предательству.

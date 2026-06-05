@@ -1,0 +1,125 @@
+name: "Зоран Охотник"
+race: "Гнолл"
+class: "Следопыт"
+level: 1
+background: "Отшельник (Outlander)"
+subclass: "Охотник (Hunter)" # optional
+
+characteristics:
+  strength: 16 # 14 base +2 racial
+  dexterity: 15
+  constitution: 14 # 13 base +1 racial
+  intelligence: 10
+  wisdom: 12
+  charisma: 8
+
+modifiers:
+  strength: 3
+  dexterity: 2
+  constitution: 2
+  intelligence: 0
+  wisdom: 1
+  charisma: -1
+
+combat:
+  hp_current: 12
+  hp_max: 12
+  ac: 13 # leather armor 11 + Dex 2
+  initiative: 2
+  speed: 30
+  hit_dice: "1d10"
+  proficiency_bonus: 2
+
+saving_throws:
+  strength: 5 # +3 Str +2 Prof
+  dexterity: 4 # +2 Dex +2 Prof
+  constitution: 2
+  intelligence: 0
+  wisdom: 1
+  charisma: -1
+  proficient:
+    - strength
+    - dexterity
+
+skills:
+  perception: 3 # Wis 1 + Prof 2
+  survival: 3 # Wis 1 + Prof 2 (background)
+  animal_handling: 3 # Wis 1 + Prof 2 (ranger choice)
+  stealth: 4 # Dex 2 + Prof 2 (ranger choice)
+  athletics: 3 # Str 3 (no prof)
+  investigation: 0
+  acrobatics: 2 # Dex 2 (no prof)
+  history: 0
+  insight: 1 # Wis 1 (no prof)
+  proficient:
+    - perception
+    - survival
+    - animal_handling
+    - stealth
+
+proficiencies:
+  armor:
+    - "Лёгкие доспехи"
+    - "Средние доспехи"
+  weapons:
+    - "Простое оружие"
+    - "Воинское оружие"
+    - "Луки"
+  tools:
+    - "Набор охотника"
+  languages:
+    - "Общий"
+    - "Гнолльский"
+
+attacks:
+  - name: "Короткий меч"
+    bonus: 5 # Str 3 + Prof 2
+    damage: "1d6+3"
+    damage_type: "резаный"
+    properties: "finesse, light"
+  - name: "Лук"
+    bonus: 4 # Dex 2 + Prof 2
+    damage: "1d8+2"
+    damage_type: "колющий"
+    range: "150/600 фт"
+    properties: "ammunition, two-handed"
+
+class_features:
+  - name: "Favored Enemy (Humanoids)"
+    description: "Вы получаете преимущество на проверки Выживания для отслеживания выбранных типов существ и бонус к урону против них."
+  - name: "Natural Explorer (Forest)"
+    description: "Вы получаете преимущества в путешествиях по лесу."
+  - name: "Fighting Style (Dueling)"
+    description: "+2 к урону одноручным оружием."
+  - name: "Second Wind"
+    description: "Бонусным действием восстанавливаете 1d10+уровень HP (1d10+1)."
+
+racial_features:
+  - name: "Darkvision"
+    description: "Видение в темноте до 60 футов."
+  - name: "Savage Attacks"
+    description: "При критическом попадании добавляете дополнительный урон кубика."
+  - name: "Rampage"
+    description: "После убийства существа получаете +1 к атаке до конца хода."
+
+equipment:
+  - "Кожаный доспех"
+  - "Короткий меч"
+  - "Лук + 20 стрел"
+  - "Набор охотника"
+  - "Туристический набор"
+  - "Карта местности"
+  - "Палатка"
+  - "Верёвка (50 футов)"
+  - "Факелы (5)"
+  - "Рационы (5 дней)"
+
+money:
+  gp: 0
+  sp: 0
+  cp: 0
+
+trait: "Хитрый и выживающий, я доверяю лишь своим инстинктам."
+
+history: |
+  Зоран Охотник родился в клане гнолов, где выживание зависело от охоты и силы. С детства он обучался выслеживанию добычи, но его любопытство к миру за пределами клана привело к изгнанию. Теперь он скитается в одиночку, охотясь на зверей и путешествуя по диким землям, ищет новые территории и возможности доказать свою силу.
